@@ -1,0 +1,68 @@
+body {
+    background: #fafafa;
+}
+
+.dino {
+    height: 60px;
+    width: 60px;
+    background-image: url(img/dino.png);
+    position: absolute;
+    bottom: 0;
+}
+
+.cactus {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    bottom: 0;
+    background-image: url(img/cactus.png);
+}
+
+.game-text {
+    display: grid;
+    grid-template: "blank info score";
+}
+
+.game-info {
+    text-align: center;
+    color: #666666;
+    margin-top: 50px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.score {
+    text-align: end;
+    color: #666666;
+    margin-top: 50px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+    position: relative;
+    bottom: 0;
+    background-image: url(img/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    width: 100%;
+    height: 200px;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+
+    to {
+        background-position: 0;
+    }
+}
+
+.night {
+    filter: invert(100%);
+    transition: ease 2s;
+}
+
+.day {
+    filter: invert(0%);
+    transition: ease 2s;
+}
